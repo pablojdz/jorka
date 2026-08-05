@@ -465,7 +465,6 @@ h1, h2, h3 {
   background: rgba(255, 255, 255, 0.05);
   padding: 32px;
   border-radius: var(--radius);
-  position: relative;
 }
 
 .contact__form label {
@@ -494,20 +493,6 @@ h1, h2, h3 {
 .contact__form button {
   margin-top: 8px;
   align-self: flex-start;
-}
-
-.contact__form button:disabled {
-  opacity: 0.7;
-  cursor: wait;
-}
-
-.contact__honeypot {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }
 
 .thanks {
