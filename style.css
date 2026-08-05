@@ -511,9 +511,19 @@ h1, h2, h3 {
   padding-bottom: 80px;
 }
 
-.thanks__inner p {
+.thanks .eyebrow {
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.thanks .section__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.thanks__inner > p:not(.eyebrow) {
   margin-bottom: 28px;
-  color: #E9D5BB;
+  color: #F3E4D2;
 }
 
 /* =========================================================
