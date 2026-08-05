@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -221,25 +221,41 @@
         </ul>
       </div>
 
-      <form class="contact__form" id="contactForm" name="contacto" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contacto">
+      <form
+        class="contact__form"
+        id="contactForm"
+        name="contacto"
+        method="POST"
+        action="/gracias.html"
+        netlify
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contacto">
+        <p class="contact__honeypot" aria-hidden="true">
+          <label>
+            No completar este campo
+            <input type="text" name="bot-field" tabindex="-1" autocomplete="off">
+          </label>
+        </p>
         <label>
           Nombre
-          <input type="text" name="nombre" required>
+          <input type="text" name="nombre" required autocomplete="name">
         </label>
         <label>
           Correo electrónico
-          <input type="email" name="correo" required>
+          <input type="email" name="correo" required autocomplete="email">
         </label>
         <label>
           Teléfono
-          <input type="tel" name="telefono">
+          <input type="tel" name="telefono" autocomplete="tel">
         </label>
         <label>
           Mensaje
           <textarea name="mensaje" rows="4" required></textarea>
         </label>
-        <button type="submit" class="btn btn--primary">Enviar</button>
+        <p class="contact__status" id="formStatus" role="status" aria-live="polite" hidden></p>
+        <button type="submit" class="btn btn--primary" id="formSubmit">Enviar</button>
       </form>
     </div>
   </section>
@@ -274,6 +290,44 @@
         handle.style.left = range.value + '%';
       });
     });
+
+    // Envío del formulario vía Netlify Forms (AJAX) con feedback en la página
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const formSubmit = document.getElementById('formSubmit');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        formStatus.hidden = false;
+        formStatus.className = 'contact__status contact__status--pending';
+        formStatus.textContent = 'Enviando mensaje…';
+        formSubmit.disabled = true;
+
+        try {
+          const formData = new FormData(contactForm);
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+          });
+
+          if (!response.ok) {
+            throw new Error('No se pudo enviar el formulario');
+          }
+
+          contactForm.reset();
+          formStatus.className = 'contact__status contact__status--success';
+          formStatus.textContent = '¡Gracias! Recibimos tu mensaje y te responderemos a la brevedad.';
+        } catch (error) {
+          formStatus.className = 'contact__status contact__status--error';
+          formStatus.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+        } finally {
+          formSubmit.disabled = false;
+        }
+      });
+    }
   </script>
 </body>
 </html>
