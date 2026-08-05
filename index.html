@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-PE">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JorKa | Maderas, Pisos y Carpintería</title>
-  <meta name="description" content="JorKa: restauración, plastificado, hidrolaqueado e instalación de pisos de madera, decks y adoquines en C.A.B.A.">
+  <meta name="description" content="JorKa: restauración, plastificado, hidrolaqueado e instalación de pisos de madera, decks y adoquines.">
 
   <!-- Tipografías (puedes cambiarlas en fonts.google.com) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -64,8 +64,8 @@
       <div class="about__text">
         <p class="eyebrow">Nosotros</p>
         <h2 class="section__title">Cuidamos cada detalle como si fuera nuestra propia casa</h2>
-        <p>En JorKa trabajamos la madera desde hace más de 15 años, restaurando y construyendo pisos, decks y estructuras que acompañan a nuestros clientes por generaciones. Cada proyecto lo encaramos con la misma dedicación, sin importar el tamaño.</p>
-        <p>Nos comprometemos con materiales de calidad, plazos claros y un acabado prolijo. Trabajamos tanto en viviendas particulares como en locales comerciales, canchas y espacios exteriores en toda C.A.B.A.</p>
+        <p>En JorKa trabajamos la madera desde hace más de 15 años, restaurando y construyendo pisos, decks y estructuras que acompañan a nuestros clientes por generaciones. Cada proyecto lo asumimos con la misma dedicación, sin importar el tamaño.</p>
+        <p>Nos comprometemos con materiales de calidad, plazos claros y un acabado cuidadoso. Trabajamos tanto en viviendas particulares como en locales comerciales, áreas deportivas y espacios exteriores.</p>
       </div>
     </div>
   </section>
@@ -164,13 +164,13 @@
   <section class="section">
     <div class="container">
       <p class="eyebrow center">¿Por qué elegirnos?</p>
-      <h2 class="section__title center">Experiencia, prolijidad y compromiso en cada trabajo</h2>
+      <h2 class="section__title center">Experiencia, esmero y compromiso en cada trabajo</h2>
 
       <div class="features">
         <div class="feature">
           <div class="feature__icon">✓</div>
           <h3>Más de 15 años de experiencia</h3>
-          <p>Cientos de pisos, decks y estructuras entregados en viviendas, comercios y espacios deportivos de C.A.B.A.</p>
+          <p>Cientos de pisos, decks y estructuras entregados en viviendas, comercios y espacios deportivos.</p>
         </div>
         <div class="feature">
           <div class="feature__icon">✓</div>
@@ -212,22 +212,21 @@
       <div class="contact__info">
         <p class="eyebrow">Contacto</p>
         <h2 class="section__title">Solicita tu presupuesto</h2>
-        <p>Contanos qué necesitás y te respondemos a la brevedad con una cotización a medida.</p>
+        <p>Cuéntanos qué necesitas y te respondemos pronto con una cotización a tu medida.</p>
 
         <ul class="contact__list">
           <li>📞 1127024330 - 1153352977</li>
           <li>✉️ karencueva651@gmail.com</li>
-          <li>📍 C.A.B.A.</li>
+          <li>📍 Perú</li>
         </ul>
       </div>
 
       <form
         class="contact__form"
-        id="contactForm"
         name="contacto"
         method="POST"
         action="/gracias.html"
-        netlify
+        enctype="application/x-www-form-urlencoded"
         data-netlify="true"
         netlify-honeypot="bot-field"
       >
@@ -254,8 +253,7 @@
           Mensaje
           <textarea name="mensaje" rows="4" required></textarea>
         </label>
-        <p class="contact__status" id="formStatus" role="status" aria-live="polite" hidden></p>
-        <button type="submit" class="btn btn--primary" id="formSubmit">Enviar</button>
+        <button type="submit" class="btn btn--primary">Enviar</button>
       </form>
     </div>
   </section>
@@ -290,44 +288,6 @@
         handle.style.left = range.value + '%';
       });
     });
-
-    // Envío del formulario vía Netlify Forms (AJAX) con feedback en la página
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    const formSubmit = document.getElementById('formSubmit');
-
-    if (contactForm) {
-      contactForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        formStatus.hidden = false;
-        formStatus.className = 'contact__status contact__status--pending';
-        formStatus.textContent = 'Enviando mensaje…';
-        formSubmit.disabled = true;
-
-        try {
-          const formData = new FormData(contactForm);
-          const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-          });
-
-          if (!response.ok) {
-            throw new Error('No se pudo enviar el formulario');
-          }
-
-          contactForm.reset();
-          formStatus.className = 'contact__status contact__status--success';
-          formStatus.textContent = '¡Gracias! Recibimos tu mensaje y te responderemos a la brevedad.';
-        } catch (error) {
-          formStatus.className = 'contact__status contact__status--error';
-          formStatus.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
-        } finally {
-          formSubmit.disabled = false;
-        }
-      });
-    }
   </script>
 </body>
 </html>
