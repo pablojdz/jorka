@@ -510,29 +510,6 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
-.contact__status {
-  margin: 0;
-  padding: 12px 14px;
-  border-radius: 8px;
-  font-size: 0.92rem;
-  line-height: 1.4;
-}
-
-.contact__status--pending {
-  background: rgba(255, 255, 255, 0.12);
-  color: #F3E4D2;
-}
-
-.contact__status--success {
-  background: rgba(62, 140, 90, 0.25);
-  color: #D7F5E2;
-}
-
-.contact__status--error {
-  background: rgba(170, 60, 50, 0.28);
-  color: #FFD9D4;
-}
-
 .thanks {
   min-height: 100vh;
   display: flex;
