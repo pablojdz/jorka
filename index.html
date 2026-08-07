@@ -4,276 +4,358 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JorKa | Maderas, Pisos y Carpintería</title>
-  <meta name="description" content="JorKa: restauración, plastificado, hidrolaqueado e instalación de pisos de madera, decks y adoquines.">
+  <meta name="description" content="JorKa: restauración, plastificado, hidrolaqueado e instalación de pisos de madera, decks y adoquines. Acabados artesanales que duran generaciones.">
+  <meta name="theme-color" content="#16110D">
+  <link rel="icon" href="img/logo.jpeg" type="image/jpeg">
 
-  <!-- Tipografías (puedes cambiarlas en fonts.google.com) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Marcellus&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
-  <!-- ===================== HEADER / NAV ===================== -->
-  <header class="header" id="inicio">
-    <div class="container header__inner">
-      <a href="#inicio" class="logo">
-        <img src="img/logo.jpeg" alt="JorKa - Maderas, Pisos y Carpintería" class="logo__image">
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <!-- ===================== NAV (isla flotante) ===================== -->
+  <header class="nav" id="inicio">
+    <div class="nav__island">
+      <a href="#inicio" class="nav__logo" aria-label="JorKa — inicio">
+        <img src="img/logo.jpeg" alt="JorKa" width="622" height="646" class="nav__logo-img">
+        <span class="nav__logo-word">JorKa</span>
       </a>
 
-      <nav class="nav" id="nav">
-        <ul class="nav__list">
-          <li><a href="#inicio" class="nav__link">Inicio</a></li>
-          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
-          <li><a href="#servicios" class="nav__link">Servicios</a></li>
-          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-          <li><a href="#contacto" class="nav__link">Contacto</a></li>
-        </ul>
+      <nav class="nav__links" id="navMenu" aria-label="Navegación principal">
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#proceso" class="nav__link">Proceso</a>
+        <a href="#servicios" class="nav__link">Servicios</a>
+        <a href="#proyectos" class="nav__link">Proyectos</a>
+        <a href="#contacto" class="nav__link nav__link--cta">Cotizar</a>
       </nav>
 
-      <div class="header__contact">
-        <span>📞 1127024330 - 1153352977</span>
-        <span>✉️ karencueva651@gmail.com</span>
-      </div>
-
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="container hero__content">
-      <p class="eyebrow">Más de 15 años trabajando la madera</p>
-      <h1 class="hero__title">Pisos y carpintería en madera, hechos para durar</h1>
-      <p class="hero__subtitle">Restauramos, instalamos y protegemos tus pisos de madera, decks y adoquines con la calidad de un trabajo artesanal y materiales de primera.</p>
-      <div class="hero__actions">
-        <a href="#contacto" class="btn btn--primary">Solicitar cotización</a>
-        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
-      </div>
-    </div>
-  </section>
+  <main id="contenido">
 
-  <!-- ===================== NOSOTROS ===================== -->
-  <section class="section" id="nosotros">
-    <div class="container about">
-      <div class="about__image">
-        <img src="img/principal.jpg" alt="Taller de JorKa, maderas y pisos">
-      </div>
-      <div class="about__text">
-        <p class="eyebrow">Nosotros</p>
-        <h2 class="section__title">Cuidamos cada detalle como si fuera nuestra propia casa</h2>
-        <p>En JorKa trabajamos la madera desde hace más de 15 años, restaurando y construyendo pisos, decks y estructuras que acompañan a nuestros clientes por generaciones. Cada proyecto lo asumimos con la misma dedicación, sin importar el tamaño.</p>
-        <p>Nos comprometemos con materiales de calidad, plazos claros y un acabado cuidadoso. Trabajamos tanto en viviendas particulares como en locales comerciales, áreas deportivas y espacios exteriores.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SERVICIOS (cada tarjeta con slider antes/después) ===================== -->
-  <section class="section section--muted" id="servicios">
-    <div class="container">
-      <p class="eyebrow center">Servicios</p>
-      <h2 class="section__title center">ALGUNOS DE NUESTROS SERVICIOS QUE OFRECEMOS</h2>
-
-      <div class="cards">
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-1.jpeg" alt="Reparación en madera después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio1-antes.jpeg" alt="Reparación en madera antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">REPARACION EN MADERA</h3>
-          <p class="card__text">Restauramos y acondicionamos sus superficies, eliminando rayones, desgaste e imperfecciones para devolverles su belleza original.</p>
-        </article>
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-2.jpeg" alt="Plastificado después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio2-antes.jpeg" alt="Plastificado antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">PLASTIFICADO</h3>
-          <p class="card__text">Sellado tradicional de alta resistencia que otorga un brillo duradero, protegiendo sus pisos del desgaste diario y facilitando su limpieza.</p>
-        </article>
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-3.jpeg" alt="Hidrolaqueado después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio3-antes.jpeg" alt="Hidrolaqueado antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">HIDROLAQUEADO</h3>
-          <p class="card__text">Acabado ecológico al agua que resalta la textura natural de la madera. Secado rápido, sin olores fuertes y con excelente resistencia al tránsito.</p>
-        </article>
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-4.jpeg" alt="Instalación de pisos de madera después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio4-antes.jpeg" alt="Instalación de pisos de madera antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">INSTALACION DE PISOS DE MADERA</h3>
-          <p class="card__text">Colocación profesional con nivelación precisa. Trabajamos con maderas de primera calidad para crear ambientes cálidos y elegantes.</p>
-        </article>
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-5.jpg" alt="Colocación deck después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio5-antes.jpg" alt="Colocación deck antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">COLOCACION DECK</h3>
-          <p class="card__text">Estructuras exteriores de madera o composite (WPC) diseñadas para resistir a la intemperie. Ideales para embellecer terrazas, jardines y bordes de piscina.</p>
-        </article>
-
-        <article class="card">
-          <div class="ba-slider">
-            <img src="img/servicio-6.jpg" alt="Instalación de adoquines después" class="ba-slider__after-full">
-            <div class="ba-slider__after">
-              <img src="img/servicio6-antes.jpg" alt="Instalación de adoquines antes">
-            </div>
-            <input type="range" min="0" max="100" value="50" class="ba-slider__range">
-            <div class="ba-slider__handle"></div>
-          </div>
-          <h3 class="card__title">INSTALACION DE ADOQUINES</h3>
-          <p class="card__text">Preparación experta del terreno y colocación detallada para senderos, entradas y patios, garantizando superficies firmes, duraderas y estéticas.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
-  <section class="section">
-    <div class="container">
-      <p class="eyebrow center">¿Por qué elegirnos?</p>
-      <h2 class="section__title center">Experiencia, esmero y compromiso en cada trabajo</h2>
-
-      <div class="features">
-        <div class="feature">
-          <div class="feature__icon">✓</div>
-          <h3>Más de 15 años de experiencia</h3>
-          <p>Cientos de pisos, decks y estructuras entregados en viviendas, comercios y espacios deportivos.</p>
+    <!-- ===================== HERO (revelado antes/después) ===================== -->
+    <section class="hero">
+      <div class="ba-slider hero__reveal" data-autosweep>
+        <img src="img/servicio-1.jpeg" alt="Piso de madera restaurado por JorKa" width="1599" height="899" class="ba-slider__after-full" fetchpriority="high">
+        <div class="ba-slider__after">
+          <img src="img/servicio1-antes.jpeg" alt="Piso de madera desgastado antes de la restauración" width="353" height="562">
         </div>
-        <div class="feature">
-          <div class="feature__icon">✓</div>
-          <h3>Materiales de primera calidad</h3>
-          <p>Trabajamos con maderas y productos seleccionados para garantizar durabilidad y un acabado profesional.</p>
+        <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar el piso antes y después de la restauración">
+        <div class="ba-slider__handle" aria-hidden="true">
+          <span class="ba-slider__grip"></span>
         </div>
-        <div class="feature">
-          <div class="feature__icon">✓</div>
-          <h3>Presupuesto claro, sin sorpresas</h3>
-          <p>Te asesoramos desde el primer contacto y coordinamos los tiempos de obra para que sepas qué esperar.</p>
+        <span class="ba-slider__tag ba-slider__tag--left" aria-hidden="true">Antes</span>
+        <span class="ba-slider__tag ba-slider__tag--right" aria-hidden="true">Después</span>
+      </div>
+
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow reveal">Restauración · Pisos · Carpintería</p>
+        <h1 class="hero__title reveal" data-delay="1">Devolvemos la vida<br>a la madera</h1>
+        <p class="hero__subtitle reveal" data-delay="2">Restauramos, instalamos y protegemos pisos, decks y adoquines con acabados artesanales pensados para durar&nbsp;generaciones.</p>
+        <div class="hero__actions reveal" data-delay="3">
+          <a href="#contacto" class="btn btn--primary">
+            <span>Solicitar cotización</span>
+            <span class="btn__icon" aria-hidden="true">→</span>
+          </a>
+          <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+        </div>
+        <p class="hero__hint reveal" data-delay="4" aria-hidden="true">Arrastra para ver la transformación</p>
+      </div>
+    </section>
+
+    <!-- ===================== NOSOTROS ===================== -->
+    <section class="section" id="nosotros">
+      <div class="container about">
+        <div class="about__media reveal">
+          <div class="bezel">
+            <div class="bezel__core">
+              <img src="img/principal.jpg" alt="Taller de JorKa, trabajo en maderas y pisos" width="625" height="350" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="about__text reveal" data-delay="1">
+          <p class="eyebrow">Nosotros</p>
+          <h2 class="section__title">Cuidamos cada veta como si fuera nuestra&nbsp;casa</h2>
+          <p>En JorKa trabajamos la madera desde hace más de 15 años, restaurando y construyendo pisos, decks y estructuras que acompañan a nuestros clientes por generaciones. Cada proyecto lo asumimos con la misma dedicación, sin importar el&nbsp;tamaño.</p>
+          <p>Nos comprometemos con materiales de calidad, plazos claros y un acabado cuidadoso. Trabajamos en viviendas particulares, locales comerciales, áreas deportivas y espacios&nbsp;exteriores.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== PROYECTOS / GALERÍA ===================== -->
-  <section class="section section--muted" id="proyectos">
-    <div class="container">
-      <p class="eyebrow center">Proyectos</p>
-      <h2 class="section__title center">Algunos de nuestros trabajos</h2>
+    <div class="seam" aria-hidden="true"></div>
 
-      <div class="gallery">
-        <div class="gallery__item">
-          <img src="img/proyecto1.jpeg" alt="Proyecto 1 - piso de madera restaurado">
-        </div>
-        <div class="gallery__item">
-          <img src="img/proyecto2.jpeg" alt="Proyecto 2 - piso de madera restaurado">
-        </div>
-        <div class="gallery__item">
-          <img src="img/proyecto3.jpeg" alt="Proyecto 3 - piso de madera restaurado">
+    <!-- ===================== PROCESO (secuencia real) ===================== -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2 class="section__title">Un proceso, cuatro&nbsp;pasos</h2>
+        </header>
+
+        <ol class="process">
+          <li class="process__step reveal">
+            <span class="process__num">01</span>
+            <h3 class="process__title">Diagnóstico</h3>
+            <p class="process__text">Evaluamos el estado de la madera y definimos el tratamiento correcto para tu&nbsp;superficie.</p>
+          </li>
+          <li class="process__step reveal" data-delay="1">
+            <span class="process__num">02</span>
+            <h3 class="process__title">Lijado</h3>
+            <p class="process__text">Retiramos el desgaste y nivelamos la madera hasta dejarla lista para el&nbsp;acabado.</p>
+          </li>
+          <li class="process__step reveal" data-delay="2">
+            <span class="process__num">03</span>
+            <h3 class="process__title">Sellado</h3>
+            <p class="process__text">Aplicamos el sellador que protege la madera y realza su veta&nbsp;natural.</p>
+          </li>
+          <li class="process__step reveal" data-delay="3">
+            <span class="process__num">04</span>
+            <h3 class="process__title">Acabado</h3>
+            <p class="process__text">Plastificado o hidrolaqueado para un brillo resistente y&nbsp;duradero.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS (bento + slider antes/después) ===================== -->
+    <section class="section section--muted" id="servicios">
+      <div class="container">
+        <header class="section__head center reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2 class="section__title">Lo que hacemos por tu&nbsp;madera</h2>
+        </header>
+
+        <div class="cards">
+
+          <article class="card card--feature reveal">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-1.jpeg" alt="Reparación en madera, resultado final" width="1599" height="899" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio1-antes.jpeg" alt="Reparación en madera, estado inicial" width="353" height="562">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar reparación en madera antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Servicio insignia</p>
+              <h3 class="card__title">Reparación en madera</h3>
+              <p class="card__text">Restauramos y acondicionamos tus superficies, eliminando rayones, desgaste e imperfecciones para devolverles su belleza&nbsp;original.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-delay="1">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-2.jpeg" alt="Plastificado, resultado final" width="899" height="1599" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio2-antes.jpeg" alt="Plastificado, estado inicial" width="1599" height="899">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar plastificado antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Plastificado</h3>
+              <p class="card__text">Sellado tradicional de alta resistencia que otorga un brillo duradero y protege tus pisos del uso&nbsp;diario.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-delay="2">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-3.jpeg" alt="Hidrolaqueado, resultado final" width="899" height="1599" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio3-antes.jpeg" alt="Hidrolaqueado, estado inicial" width="1037" height="1381">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar hidrolaqueado antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Hidrolaqueado</h3>
+              <p class="card__text">Acabado ecológico al agua que resalta la textura natural. Secado rápido, sin olores fuertes y muy&nbsp;resistente.</p>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-4.jpeg" alt="Instalación de pisos de madera, resultado final" width="899" height="1599" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio4-antes.jpeg" alt="Instalación de pisos de madera, estado inicial" width="899" height="1599">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar instalación de pisos antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Instalación de pisos</h3>
+              <p class="card__text">Colocación profesional con nivelación precisa y maderas de primera para ambientes cálidos y&nbsp;elegantes.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-delay="1">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-5.jpg" alt="Colocación de deck, resultado final" width="819" height="1024" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio5-antes.jpg" alt="Colocación de deck, estado inicial" width="1000" height="667">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar colocación de deck antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Colocación de deck</h3>
+              <p class="card__text">Estructuras exteriores en madera o composite (WPC) que resisten la intemperie en terrazas, jardines y&nbsp;piscinas.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" data-delay="2">
+            <div class="bezel">
+              <div class="bezel__core">
+                <div class="ba-slider">
+                  <img src="img/servicio-6.jpg" alt="Instalación de adoquines, resultado final" width="600" height="600" class="ba-slider__after-full" loading="lazy">
+                  <div class="ba-slider__after">
+                    <img src="img/servicio6-antes.jpg" alt="Instalación de adoquines, estado inicial" width="600" height="600">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider__range" aria-label="Comparar instalación de adoquines antes y después">
+                  <div class="ba-slider__handle" aria-hidden="true"><span class="ba-slider__grip"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Instalación de adoquines</h3>
+              <p class="card__text">Preparación experta del terreno y colocación detallada para senderos, entradas y patios firmes y&nbsp;duraderos.</p>
+            </div>
+          </article>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== CONTACTO ===================== -->
-  <section class="section contact" id="contacto">
-    <div class="container contact__grid">
-      <div class="contact__info">
-        <p class="eyebrow">Contacto</p>
-        <h2 class="section__title">Solicita tu presupuesto</h2>
-        <p>Cuéntanos qué necesitas y te respondemos pronto con una cotización a tu medida.</p>
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proyectos</p>
+          <h2 class="section__title">Algunos de nuestros&nbsp;trabajos</h2>
+        </header>
 
-        <ul class="contact__list">
-          <li>📞 1127024330 - 1153352977</li>
-          <li>✉️ karencueva651@gmail.com</li>
-          <li>📍 Perú</li>
-        </ul>
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--tall reveal">
+            <img src="img/proyecto1.jpeg" alt="Piso de madera restaurado en vivienda" width="899" height="1599" loading="lazy">
+          </figure>
+          <figure class="gallery__item reveal" data-delay="1">
+            <img src="img/proyecto2.jpeg" alt="Piso de madera instalado en ambiente interior" width="1599" height="899" loading="lazy">
+          </figure>
+          <figure class="gallery__item reveal" data-delay="2">
+            <img src="img/proyecto3.jpeg" alt="Superficie de madera con acabado plastificado" width="1599" height="899" loading="lazy">
+          </figure>
+        </div>
       </div>
+    </section>
 
-      <form class="contact__form" name="contact" method="POST" action="/gracias/" netlify>
-        <input type="hidden" name="form-name" value="contact">
-        <label>
-          Nombre
-          <input type="text" name="nombre" required autocomplete="name">
-        </label>
-        <label>
-          Correo electrónico
-          <input type="email" name="correo" required autocomplete="email">
-        </label>
-        <label>
-          Teléfono
-          <input type="tel" name="telefono" autocomplete="tel">
-        </label>
-        <label>
-          Mensaje
-          <textarea name="mensaje" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn btn--primary">Enviar</button>
-      </form>
-    </div>
-  </section>
+    <!-- ===================== STATS ===================== -->
+    <section class="stats" aria-label="JorKa en cifras">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num">15+</span>
+          <span class="stat__label">Años trabajando la madera</span>
+        </div>
+        <div class="stat reveal" data-delay="1">
+          <span class="stat__num">6</span>
+          <span class="stat__label">Servicios especializados</span>
+        </div>
+        <div class="stat reveal" data-delay="2">
+          <span class="stat__num">100%</span>
+          <span class="stat__label">Materiales de primera calidad</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section__title">Solicita tu&nbsp;presupuesto</h2>
+          <p class="contact__lead">Cuéntanos qué necesitas y te respondemos pronto con una cotización a tu&nbsp;medida.</p>
+
+          <ul class="contact__list">
+            <li><span class="contact__ico" aria-hidden="true">✆</span> <a href="tel:1127024330">1127024330</a> · <a href="tel:1153352977">1153352977</a></li>
+            <li><span class="contact__ico" aria-hidden="true">✉</span> <a href="mailto:karencueva651@gmail.com">karencueva651@gmail.com</a></li>
+            <li><span class="contact__ico" aria-hidden="true">◈</span> Perú</li>
+          </ul>
+
+          <a href="https://wa.me/5491127024330" target="_blank" rel="noopener" class="btn btn--whatsapp">
+            <span>Escríbenos por WhatsApp</span>
+            <span class="btn__icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="bezel contact__formwrap reveal" data-delay="1">
+          <form class="bezel__core contact__form" name="contact" method="POST" action="/gracias/" netlify>
+            <input type="hidden" name="form-name" value="contact">
+            <label class="field">
+              <span class="field__label">Nombre</span>
+              <input type="text" name="nombre" required autocomplete="name" placeholder="Ej. Karen Cueva…">
+            </label>
+            <label class="field">
+              <span class="field__label">Correo electrónico</span>
+              <input type="email" name="correo" required autocomplete="email" spellcheck="false" placeholder="Ej. karen@correo.com…">
+            </label>
+            <label class="field">
+              <span class="field__label">Teléfono</span>
+              <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Ej. 1127024330…">
+            </label>
+            <label class="field">
+              <span class="field__label">Mensaje</span>
+              <textarea name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu piso, deck o proyecto…"></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary btn--block">
+              <span>Enviar solicitud</span>
+              <span class="btn__icon" aria-hidden="true">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> JorKa.</p>
-      <a href="https://wa.me/5491127024330" target="_blank" rel="noopener" class="footer__whatsapp">WhatsApp</a>
+      <p class="footer__brand">JorKa</p>
+      <p class="footer__copy">&copy; <span id="year"></span> JorKa · Maderas, Pisos y Carpintería</p>
+      <a href="https://wa.me/5491127024330" target="_blank" rel="noopener" class="footer__whatsapp">WhatsApp →</a>
     </div>
   </footer>
 
-  <script>
-    // Año automático en el footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Menú hamburguesa para móvil
-    const navToggle = document.getElementById('navToggle');
-    const nav = document.getElementById('nav');
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('nav--open');
-    });
-
-    // Sliders de antes/después — funciona para todos a la vez
-    document.querySelectorAll('.ba-slider').forEach(slider => {
-      const range = slider.querySelector('.ba-slider__range');
-      const afterLayer = slider.querySelector('.ba-slider__after');
-      const handle = slider.querySelector('.ba-slider__handle');
-
-      range.addEventListener('input', () => {
-        afterLayer.style.clipPath = `inset(0 ${100 - range.value}% 0 0)`;
-        handle.style.left = range.value + '%';
-      });
-    });
-  </script>
+  <script src="script.js?v=10" defer></script>
 </body>
 </html>
