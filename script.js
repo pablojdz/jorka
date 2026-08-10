@@ -3,11 +3,9 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* Footer year */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* Floating island nav: scroll state + mobile morphing menu */
   var nav = document.querySelector(".nav");
   var toggle = document.getElementById("navToggle");
   var menu = document.getElementById("navMenu");
@@ -49,7 +47,22 @@
     if (e.key === "Escape") closeMenu();
   });
 
-  /* Before/after sliders (hero + service cards) */
+  /* Logo → top of page (hero / portada) */
+  var logo = document.getElementById("navLogo");
+  if (logo) {
+    logo.addEventListener("click", function (e) {
+      e.preventDefault();
+      closeMenu();
+      var top = document.getElementById("inicio");
+      if (top && typeof top.scrollIntoView === "function") {
+        top.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      }
+      if (history.replaceState) history.replaceState(null, "", "#inicio");
+    });
+  }
+
   var sliders = document.querySelectorAll(".ba-slider");
   sliders.forEach(function (slider) {
     var range = slider.querySelector(".ba-slider__range");
@@ -65,7 +78,6 @@
     range.addEventListener("input", apply);
     apply();
 
-    /* One gentle auto-sweep on the hero to invite interaction */
     if (slider.hasAttribute("data-autosweep") && !reduceMotion) {
       var keyframes = [50, 68, 32, 50];
       var start = null;
@@ -97,7 +109,6 @@
     }
   });
 
-  /* Scroll reveals */
   var reveals = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     reveals.forEach(function (el) { el.classList.add("is-in"); });
@@ -111,5 +122,85 @@
       });
     }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
     reveals.forEach(function (el) { revealIO.observe(el); });
+  }
+
+  /* Contact form: Spanish validation + submitting state */
+  var form = document.querySelector(".contact__form");
+  if (form) {
+    var statusEl = document.getElementById("formStatus");
+    var submitBtn = document.getElementById("formSubmit");
+    var labelEl = submitBtn ? submitBtn.querySelector(".btn__label") : null;
+
+    var messages = {
+      nombre: "Escribí tu nombre para que sepamos a quién responder.",
+      correo: "Necesitamos un correo válido (con @) para contactarte.",
+      mensaje: "Contanos un poco sobre el piso, deck o proyecto."
+    };
+
+    function clearErrors() {
+      form.querySelectorAll(".field").forEach(function (field) {
+        field.classList.remove("is-invalid");
+      });
+      form.querySelectorAll(".field__error").forEach(function (el) {
+        el.textContent = "";
+      });
+      if (statusEl) {
+        statusEl.textContent = "";
+        statusEl.classList.remove("is-error");
+      }
+    }
+
+    function showFieldError(name, msg) {
+      var input = form.elements[name];
+      if (!input) return;
+      var field = input.closest(".field");
+      var err = field ? field.querySelector('.field__error[data-for="' + name + '"]') : null;
+      if (field) field.classList.add("is-invalid");
+      if (err) err.textContent = msg;
+    }
+
+    form.addEventListener("submit", function (e) {
+      clearErrors();
+      var firstInvalid = null;
+
+      ["nombre", "correo", "mensaje"].forEach(function (name) {
+        var input = form.elements[name];
+        if (!input) return;
+        if (!input.checkValidity()) {
+          showFieldError(name, messages[name]);
+          if (!firstInvalid) firstInvalid = input;
+        }
+      });
+
+      if (firstInvalid) {
+        e.preventDefault();
+        if (statusEl) {
+          statusEl.textContent = "Revisá los campos marcados e intentá de nuevo.";
+          statusEl.classList.add("is-error");
+        }
+        firstInvalid.focus();
+        return;
+      }
+
+      if (submitBtn) {
+        submitBtn.classList.add("is-loading");
+        submitBtn.setAttribute("aria-disabled", "true");
+        if (labelEl) labelEl.textContent = "Enviando…";
+      }
+      if (statusEl) {
+        statusEl.textContent = "Enviando tu mensaje…";
+        statusEl.classList.remove("is-error");
+      }
+    });
+
+    form.addEventListener("input", function (e) {
+      var field = e.target.closest(".field");
+      if (!field || !field.classList.contains("is-invalid")) return;
+      if (e.target.checkValidity()) {
+        field.classList.remove("is-invalid");
+        var err = field.querySelector(".field__error");
+        if (err) err.textContent = "";
+      }
+    });
   }
 })();
