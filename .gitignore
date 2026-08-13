@@ -1,2 +1,3 @@
 .cursor/
-.impeccable/
+.impeccable/*
+!.impeccable/design.json

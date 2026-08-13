@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-13T22:51:00.000Z",
+  "title": "Design System: JorKa",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(18.2% 0.012 60.7)",
+        "tonalRamp": ["#0f0a07", "#28231e", "#47413c", "#68625d", "#8c857f", "#b0a9a4", "#d4ccc6", "#f5ede7"]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink Two",
+        "canonical": "oklch(20.6% 0.014 61.8)",
+        "tonalRamp": ["#0f0a06", "#29231d", "#48413b", "#69625b", "#8c847e", "#b1a9a2", "#d5ccc5", "#f6ede5"]
+      },
+      "walnut": {
+        "role": "neutral",
+        "displayName": "Walnut",
+        "canonical": "oklch(23.1% 0.019 59.5)",
+        "tonalRamp": ["#110904", "#2b221b", "#4a4038", "#6c6159", "#8f847b", "#b4a89f", "#d8cbc2", "#f9ece2"]
+      },
+      "oak": {
+        "role": "primary",
+        "displayName": "Oak",
+        "canonical": "oklch(68.2% 0.121 68.8)",
+        "tonalRamp": ["#140800", "#361e00", "#5e3900", "#8b5600", "#b57725", "#dc9c4f", "#ffc078", "#ffebd5"]
+      },
+      "oak-soft": {
+        "role": "primary",
+        "displayName": "Oak Soft",
+        "canonical": "oklch(79.7% 0.104 74.8)",
+        "tonalRamp": ["#130900", "#331f00", "#5b3b00", "#855905", "#ab7c36", "#d1a15c", "#f6c47f", "#ffebd1"]
+      },
+      "oak-ink": {
+        "role": "primary",
+        "displayName": "Oak Ink",
+        "canonical": "oklch(19.0% 0.020 66.1)",
+        "tonalRamp": ["#110904", "#2b221a", "#4a4037", "#6b6157", "#8f847a", "#b4a99e", "#d7cbc0", "#f8ece1"]
+      },
+      "sheen": {
+        "role": "neutral",
+        "displayName": "Sheen",
+        "canonical": "oklch(94.6% 0.021 81.8)",
+        "tonalRamp": ["#0f0a03", "#292319", "#484136", "#696256", "#8c8579", "#b1aa9d", "#d5cdbf", "#f5eddf"]
+      },
+      "sheen-dim": {
+        "role": "neutral",
+        "displayName": "Sheen Dim",
+        "canonical": "oklch(78.7% 0.034 74.7)",
+        "tonalRamp": ["#130900", "#2e2210", "#4d402e", "#6f614e", "#938470", "#b8a893", "#dbcbb6", "#fdecd6"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "rgba(244, 236, 222, 0.10)",
+        "tonalRamp": ["#0f0a03", "#292319", "#484136", "#696256", "#8c8579", "#b1aa9d", "#d5cdbf", "#f5eddf"]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "canonical": "rgba(244, 236, 222, 0.18)",
+        "tonalRamp": ["#0f0a03", "#292319", "#484136", "#696256", "#8c8579", "#b1aa9d", "#d5cdbf", "#f5eddf"]
+      },
+      "error": {
+        "role": "tertiary",
+        "displayName": "Error Clay",
+        "canonical": "oklch(77.2% 0.090 33.0)",
+        "tonalRamp": ["#1e0100", "#460c03", "#6a2d21", "#8f4f41", "#b67263", "#dd9686", "#ffbbab", "#ffe9e4"]
+      },
+      "error-border": {
+        "role": "tertiary",
+        "displayName": "Error Border",
+        "canonical": "oklch(62.5% 0.117 31.9)",
+        "tonalRamp": ["#1e0100", "#490500", "#742215", "#9a4637", "#c26958", "#eb8e7c", "#ffbaac", "#ffe9e4"]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "canonical": "oklch(59.6% 0.033 70.4)",
+        "tonalRamp": ["#140800", "#2e2112", "#4e402f", "#70604f", "#938371", "#b9a895", "#dccbb7", "#fdebd7"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines and the thanks-page title. Marcellus, one sentence, never all-caps." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles in a max 36rem head. Same serif as display." },
+      "title": { "displayName": "Title", "purpose": "Service names, process steps, card titles." },
+      "body": { "displayName": "Body", "purpose": "Explanatory copy at ~38–42ch in sheen-dim." },
+      "label": { "displayName": "Label", "purpose": "Form labels, small UI, and (with uppercase) BA tags." }
+    },
+    "shadows": [
+      { "name": "island-rest", "value": "0 16px 40px -28px rgba(0, 0, 0, 0.85)", "purpose": "Contact shadow under the floating nav pill." },
+      { "name": "oak-action", "value": "0 10px 24px -16px rgba(0, 0, 0, 0.7)", "purpose": "Whisper under primary oak buttons at rest." },
+      { "name": "hero-type", "value": "0 2px 16px rgba(22, 17, 13, 0.7)", "purpose": "Desktop hero copy over photography; omit on solid ink." },
+      { "name": "input-focus", "value": "0 0 0 3px rgba(201, 138, 60, 0.22)", "purpose": "Oak glow on focused text fields." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.32, 0.72, 0, 1)", "purpose": "The only easing. Buttons, nav, process hover, reveals." },
+      { "name": "duration-state", "value": "0.35s", "purpose": "Color and background state changes." },
+      { "name": "duration-move", "value": "0.4s", "purpose": "Transform on buttons and the icon nudge." },
+      { "name": "duration-reveal", "value": "0.7s", "purpose": "Entrance fade/translate for .reveal." },
+      { "name": "duration-media", "value": "0.8s", "purpose": "Gallery image scale on hover." }
+    ],
+    "breakpoints": [
+      { "name": "nav", "value": "940px" },
+      { "name": "stack", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Oak pill for WhatsApp conversion. Trailing icon well nudges on hover.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\"><span>Escribir por WhatsApp</span><span class=\"ds-btn-primary__icon\" aria-hidden=\"true\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\"><path d=\"M2 7h9M8 3.5 11.5 7 8 10.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px 14px 24px; border: 0; border-radius: 999px; background: #C98A3C; color: #1a120a; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.01em; box-shadow: 0 10px 24px -16px rgba(0,0,0,0.7); cursor: pointer; transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1), background 0.35s cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-primary__icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 999px; background: rgba(22, 17, 13, 0.16); transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-primary:hover { background: #E4B36E; } .ds-btn-primary:hover .ds-btn-primary__icon { transform: translateX(2px); } .ds-btn-primary:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; } .ds-btn-primary:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Sheen hairline pill for secondary paths: servicios, form submit, volver.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Ver servicios</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(244, 236, 222, 0.18); background: transparent; color: #F4ECDE; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.98rem; font-weight: 600; letter-spacing: 0.01em; cursor: pointer; transition: background 0.35s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.35s cubic-bezier(0.32, 0.72, 0, 1), transform 0.4s cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-ghost:hover { background: rgba(244, 236, 222, 0.05); border-color: #C7B7A2; } .ds-btn-ghost:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; } .ds-btn-ghost:active { transform: scale(0.98); }"
+    },
+    {
+      "name": "Nav Island",
+      "kind": "nav",
+      "refersTo": "nav-island",
+      "description": "Floating lacquered pill: wordmark, quiet links, oak WhatsApp chip.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><span class=\"ds-nav__word\">JorKa</span><div class=\"ds-nav__links\"><a class=\"ds-nav__link\" href=\"#\">Nosotros</a><a class=\"ds-nav__link\" href=\"#\">Servicios</a><a class=\"ds-nav__link\" href=\"#\">Contacto</a></div><a class=\"ds-nav__wa\" href=\"#\">Escribir por WhatsApp</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 24px; width: min(520px, 100%); padding: 8px 8px 8px 16px; border-radius: 999px; background: rgba(22, 17, 13, 0.88); border: 1px solid rgba(244, 236, 222, 0.10); box-shadow: 0 16px 40px -28px rgba(0,0,0,0.85); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-nav__word { font-family: Marcellus, Georgia, serif; font-size: 1.2rem; color: #F4ECDE; } .ds-nav__links { display: flex; gap: 2px; margin-left: auto; } .ds-nav__link { padding: 9px 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 500; color: #C7B7A2; text-decoration: none; transition: color 0.25s cubic-bezier(0.32, 0.72, 0, 1), background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__link:hover { color: #F4ECDE; background: rgba(244, 236, 222, 0.05); } .ds-nav__link:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; } .ds-nav__wa { flex-shrink: 0; padding: 10px 16px; border-radius: 999px; background: #C98A3C; color: #1a120a; font-size: 0.88rem; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__wa:hover { background: #E4B36E; } .ds-nav__wa:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "12px ink well with sheen hairline; oak border and glow on focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field__label\">Nombre</span><input class=\"ds-input\" type=\"text\" placeholder=\"Ej. Karen Cueva\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-field__label { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; color: #C7B7A2; } .ds-input { font-family: inherit; font-size: 1rem; color: #F4ECDE; padding: 13px 14px; border-radius: 12px; border: 1px solid rgba(244, 236, 222, 0.18); background: rgba(22, 17, 13, 0.55); transition: border-color 0.25s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-input::placeholder { color: #8c7c6a; } .ds-input:hover { border-color: #C7B7A2; } .ds-input:focus { outline: none; border-color: #C98A3C; box-shadow: 0 0 0 3px rgba(201, 138, 60, 0.22); } .ds-input:focus-visible { outline: none; }"
+    },
+    {
+      "name": "Media Frame",
+      "kind": "card",
+      "refersTo": "media",
+      "description": "Single 20px walnut well with a varnish hairline. One surface, never nested.",
+      "html": "<figure class=\"ds-media\"><div class=\"ds-media__well\" aria-hidden=\"true\"></div><figcaption class=\"ds-media__cap\">Vivienda · restauración de piso</figcaption></figure>",
+      "css": ".ds-media { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid rgba(244, 236, 222, 0.10); background: #241B14; aspect-ratio: 4 / 3; } .ds-media__well { width: 100%; height: 100%; background: linear-gradient(145deg, #3a2a1c 0%, #241B14 42%, #1C1611 100%); } .ds-media__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 16px; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.85rem; color: #F4ECDE; background: linear-gradient(to top, rgba(22, 17, 13, 0.85), transparent); }"
+    },
+    {
+      "name": "Process Step",
+      "kind": "card",
+      "refersTo": "process-step",
+      "description": "One cell of the 20px process cluster: oak numeral, Marcellus name, dim body.",
+      "html": "<article class=\"ds-step\"><span class=\"ds-step__num\">01</span><h3 class=\"ds-step__title\">Diagnóstico</h3><p class=\"ds-step__text\">Evaluamos el estado de la madera y definimos el tratamiento correcto.</p></article>",
+      "css": ".ds-step { background: #16110D; padding: 28px 24px 36px; border: 1px solid rgba(244, 236, 222, 0.10); border-radius: 20px; transition: background 0.35s cubic-bezier(0.32, 0.72, 0, 1); } .ds-step:hover { background: #241B14; } .ds-step__num { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-variant-numeric: tabular-nums; font-size: 0.85rem; font-weight: 600; color: #C98A3C; letter-spacing: 0.08em; } .ds-step__title { font-family: Marcellus, Georgia, serif; font-size: 1.35rem; font-weight: 400; color: #F4ECDE; margin: 18px 0 8px; letter-spacing: -0.015em; } .ds-step__text { font-family: 'Hanken Grotesk', system-ui, sans-serif; color: #C7B7A2; font-size: 0.95rem; max-width: 28ch; line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Antes / Después tag",
+      "kind": "chip",
+      "refersTo": "ba-tag",
+      "description": "The only all-caps type: slider corner chips in ink wash.",
+      "html": "<span class=\"ds-ba-tag\">Antes</span>",
+      "css": ".ds-ba-tag { display: inline-block; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: #F4ECDE; background: rgba(22, 17, 13, 0.7); border: 1px solid rgba(244, 236, 222, 0.18); padding: 6px 10px; border-radius: 999px; }"
+    },
+    {
+      "name": "Before / After slider",
+      "kind": "custom",
+      "refersTo": "media",
+      "description": "Signature proof: sheen split, circular grip, Antes/Después tags.",
+      "html": "<div class=\"ds-ba\" role=\"img\" aria-label=\"Comparar antes y después\"><div class=\"ds-ba__after-full\"></div><div class=\"ds-ba__before\"></div><div class=\"ds-ba__handle\"><span class=\"ds-ba__grip\"></span></div><span class=\"ds-ba-tag ds-ba-tag--left\">Antes</span><span class=\"ds-ba-tag ds-ba-tag--right\">Después</span></div>",
+      "css": ".ds-ba { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 20px; background: #241B14; border: 1px solid rgba(244, 236, 222, 0.10); } .ds-ba__after-full { position: absolute; inset: 0; background: linear-gradient(135deg, #3d2a18 0%, #C98A3C 48%, #E4B36E 100%); } .ds-ba__before { position: absolute; inset: 0; width: 50%; background: linear-gradient(135deg, #1C1611 0%, #4a3a2c 100%); } .ds-ba__handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; transform: translateX(-50%); background: rgba(244, 236, 222, 0.9); } .ds-ba__grip { position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; transform: translate(-50%, -50%); border-radius: 999px; background: rgba(22, 17, 13, 0.6); border: 1.5px solid #F4ECDE; } .ds-ba-tag { position: absolute; bottom: 14px; font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: #F4ECDE; background: rgba(22, 17, 13, 0.7); border: 1px solid rgba(244, 236, 222, 0.18); padding: 6px 10px; border-radius: 999px; } .ds-ba-tag--left { left: 14px; } .ds-ba-tag--right { right: 14px; } .ds-ba:focus-within { outline: 2px solid #E4B36E; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Taller de Autor",
+    "overview": "JorKa looks like a dark lacquered workshop after hours: walnut walls, a single oak highlight, and paper-warm sheen for the words. The site is a persuasion surface for a carpentry house in Buenos Aires, so the craft has to feel physical — varnish, grain, quiet hands — not like a SaaS dashboard with a wood stock photo. Density is generous. Type is large. Chrome is scarce. The visitor should feel they have entered a taller, not a template.\n\nThe pairing is intentional restraint. Marcellus carries the names of things (the brand, the promises, the services). Hanken Grotesk carries everything that explains. Photography does the proving: before/after sliders are the signature, not a gallery gimmick. Motion is a single ease, slow enough to feel like a finish curing. Confirmed visual rejections: light Scandinavian furniture sites, generic “startup dark” (navy, purple, electric teal), stacked white cards, and a second accent color.",
+    "keyCharacteristics": [
+      "Near-black lacquer ground (`ink` / `ink-2` / `walnut`) with warm sheen type",
+      "One saturated voice: oak varnish, used for action and almost nothing else",
+      "Display serif + grotesque body; never a third family",
+      "Pill chrome (nav, buttons, tags) against 20px media frames",
+      "Depth by tone and hairline, not by drop shadow",
+      "Real restoration photography as the primary artifact"
+    ],
+    "rules": [
+      { "name": "The Oak Voice Rule", "body": "Oak is used on ≤10% of any screen, and only to mark action, focus, or a step number. Filling a hero, a card, or a section with oak breaks the taller.", "section": "colors" },
+      { "name": "The No-White Rule", "body": "Surfaces and type stay in the ink–walnut–sheen family. `#ffffff` and cool greys are out of gamut for this world.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Marcellus names; Hanken explains. Do not set body copy in Marcellus, and do not set a headline in Hanken except the desktop nav links (those are Hanken) and the mobile overlay links (those switch to Marcellus at display size).", "section": "typography" },
+      { "name": "The Measure Rule", "body": "Running text stays inside ~38–42ch. Display and headlines use `text-wrap: balance`. No justified type.", "section": "typography" },
+      { "name": "The One-Column Rule", "body": "Do not add a 12-column app grid or a sticky sidebar. New surfaces inherit the 1080px column and the two breakpoints.", "section": "elevation" },
+      { "name": "The Lacquer-Not-Lift Rule", "body": "Surfaces are flat at rest. If a new element needs depth, step its fill (`ink` / `ink-2` / `walnut`) or add a `line` hairline. Do not introduce a third shadow recipe.", "section": "elevation" },
+      { "name": "The Two-Radius Rule", "body": "New UI is either a 20px workshop frame or a pill. 4px “app” rounding and 16px card-kit rounding are foreign.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep oak for actions, numbers, and focus — and let photography plus sheen type do the rest.",
+      "Do set names in Marcellus and explanations in Hanken Grotesk, with body measure around 38–42ch.",
+      "Do clip images in a 20px walnut frame with a 1px `line` hairline; use the before/after slider when the story is restoration.",
+      "Do use the pill island nav, the 1080px column, and the 8/16/24/40/64 space scale.",
+      "Do honor `prefers-reduced-motion`: snap reveals, skip auto-sweep, keep scroll instant.",
+      "Do write UI in Rioplatense Spanish; English is for this spec, not for the visitor."
+    ],
+    "donts": [
+      "Don't introduce a second accent (teal, WhatsApp green, gold leaf, cool grey). WhatsApp is oak, not brand-green.",
+      "Don't use white, Inter, or a light paper background. The taller is dark.",
+      "Don't nest cards, add drop shadows under content, or round surfaces to 4–8px.",
+      "Don't uppercase body copy or headlines. Caps are reserved for BA tags.",
+      "Don't replace real job photography with illustration, 3D wood, or stock luxury interiors.",
+      "Don't add a third type family, a kicker/eyebrow above headlines, or a 12-column dashboard grid."
+    ]
+  }
+}
