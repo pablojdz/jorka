@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-13T22:51:00.000Z",
+  "generatedAt": "2026-08-14T18:56:00.000Z",
   "title": "Design System: JorKa",
   "extensions": {
     "colorMeta": {
@@ -129,9 +129,9 @@
       "name": "Nav Island",
       "kind": "nav",
       "refersTo": "nav-island",
-      "description": "Floating lacquered pill: wordmark, quiet links, oak WhatsApp chip.",
+      "description": "Floating lacquered pill: wordmark, quiet links, oak WhatsApp chip, frost blur.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><span class=\"ds-nav__word\">JorKa</span><div class=\"ds-nav__links\"><a class=\"ds-nav__link\" href=\"#\">Nosotros</a><a class=\"ds-nav__link\" href=\"#\">Servicios</a><a class=\"ds-nav__link\" href=\"#\">Contacto</a></div><a class=\"ds-nav__wa\" href=\"#\">Escribir por WhatsApp</a></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; gap: 24px; width: min(520px, 100%); padding: 8px 8px 8px 16px; border-radius: 999px; background: rgba(22, 17, 13, 0.88); border: 1px solid rgba(244, 236, 222, 0.10); box-shadow: 0 16px 40px -28px rgba(0,0,0,0.85); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-nav__word { font-family: Marcellus, Georgia, serif; font-size: 1.2rem; color: #F4ECDE; } .ds-nav__links { display: flex; gap: 2px; margin-left: auto; } .ds-nav__link { padding: 9px 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 500; color: #C7B7A2; text-decoration: none; transition: color 0.25s cubic-bezier(0.32, 0.72, 0, 1), background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__link:hover { color: #F4ECDE; background: rgba(244, 236, 222, 0.05); } .ds-nav__link:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; } .ds-nav__wa { flex-shrink: 0; padding: 10px 16px; border-radius: 999px; background: #C98A3C; color: #1a120a; font-size: 0.88rem; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__wa:hover { background: #E4B36E; } .ds-nav__wa:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; }"
+      "css": ".ds-nav { display: flex; align-items: center; gap: 24px; width: min(520px, 100%); padding: 8px 8px 8px 16px; border-radius: 999px; isolation: isolate; background: rgba(22, 17, 13, 0.58); backdrop-filter: blur(22px) saturate(1.25); -webkit-backdrop-filter: blur(22px) saturate(1.25); border: 1px solid rgba(244, 236, 222, 0.10); box-shadow: 0 16px 40px -28px rgba(0,0,0,0.85); font-family: 'Hanken Grotesk', system-ui, sans-serif; } .ds-nav__word { font-family: Marcellus, Georgia, serif; font-size: 1.2rem; color: #F4ECDE; } .ds-nav__links { display: flex; gap: 2px; margin-left: auto; } .ds-nav__link { padding: 9px 12px; border-radius: 999px; font-size: 0.9rem; font-weight: 500; color: #C7B7A2; text-decoration: none; transition: color 0.25s cubic-bezier(0.32, 0.72, 0, 1), background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__link:hover { color: #F4ECDE; background: rgba(244, 236, 222, 0.05); } .ds-nav__link:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; } .ds-nav__wa { flex-shrink: 0; padding: 10px 16px; border-radius: 999px; background: #C98A3C; color: #1a120a; font-size: 0.88rem; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 0.25s cubic-bezier(0.32, 0.72, 0, 1); } .ds-nav__wa:hover { background: #E4B36E; } .ds-nav__wa:focus-visible { outline: 2px solid #E4B36E; outline-offset: 3px; }"
     },
     {
       "name": "Text Field",

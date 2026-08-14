@@ -15,6 +15,8 @@ colors:
   error: "#E8A090"
   error-border: "#C46B5A"
   placeholder: "#8c7c6a"
+  shadow-action: "rgba(0, 0, 0, 0.7)"
+  shadow-island: "rgba(0, 0, 0, 0.85)"
 typography:
   display:
     fontFamily: "Marcellus, Georgia, Times New Roman, serif"
@@ -46,7 +48,75 @@ typography:
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "0.02em"
+  subtitle:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "clamp(1.05rem, 1.5vw, 1.18rem)"
+    fontWeight: 400
+    lineHeight: 1.65
+  wordmark:
+    fontFamily: "Marcellus, Georgia, Times New Roman, serif"
+    fontSize: "1.2rem"
+    fontWeight: 400
+  button:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.98rem"
+    fontWeight: 600
+  nav:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 500
+  nav-wa:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.88rem"
+    fontWeight: 600
+  body-sm:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.7
+  body-tight:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 400
+  caption:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.85rem"
+    fontWeight: 400
+  status:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.92rem"
+    fontWeight: 400
+  micro:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.72rem"
+    fontWeight: 500
+    letterSpacing: "0.1em"
+  micro-sm:
+    fontFamily: "Hanken Grotesk, system-ui, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 600
+  lede-max:
+    fontSize: "1.18rem"
+  thanks:
+    fontFamily: "Marcellus, Georgia, Times New Roman, serif"
+    fontSize: "clamp(2.1rem, 5vw, 3.1rem)"
+    fontWeight: 400
+  thanks-min:
+    fontSize: "2.1rem"
+  thanks-max:
+    fontSize: "3.1rem"
+  nav-mobile:
+    fontFamily: "Marcellus, Georgia, Times New Roman, serif"
+    fontSize: "clamp(1.5rem, 5vw, 1.9rem)"
+    fontWeight: 400
+  nav-mobile-min:
+    fontSize: "1.5rem"
+  nav-mobile-max:
+    fontSize: "1.9rem"
 rounded:
+  hairline: "2px"
+  mark: "7px"
+  mark-lg: "10px"
   control: "12px"
   surface: "20px"
   pill: "999px"
@@ -76,7 +146,7 @@ components:
     textColor: "{colors.sheen}"
     rounded: "{rounded.pill}"
   nav-island:
-    backgroundColor: "rgba(22, 17, 13, 0.88)"
+    backgroundColor: "rgba(22, 17, 13, 0.58)"
     rounded: "{rounded.pill}"
     padding: "8px 8px 8px 16px"
   nav-link:
@@ -242,7 +312,7 @@ Quiet, tactile, few. Primary actions are oak pills with a trailing circular icon
 - **Disabled / loading:** The submit button takes `.is-loading` (opacity 0.72). Placeholders use `placeholder`.
 
 ### Navigation
-- **Style:** A floating pill island, `width: min(1040px, 100%)`, 16px from the top (plus safe-area). Fill is ink at 88% with `blur(16px) saturate(1.2)` and a `line` hairline. On scroll past 20px, fill goes to 96%. Wordmark is Marcellus 1.2rem beside a 32px rounded logo.
+- **Style:** A floating pill island, `width: min(1040px, 100%)`, 16px from the top (plus safe-area). Fill is ink at 58% with `blur(22px) saturate(1.25)` so the photograph reads through as lacquer, not as a solid bar. On scroll past 20px, fill goes to 76% — still frosted, never opaque. Without `backdrop-filter`, fill falls back to 94%. Wordmark is Marcellus 1.2rem beside a 32px rounded logo.
 - **Links:** Hanken 0.9rem / 500 / sheen-dim, pill padding 9px 12px. Hover: sheen type + 5% sheen wash.
 - **WhatsApp chip:** Oak pill, oak-ink, 10px 16px, 0.88rem / 600. Hover to oak-soft. Stays visible in the island on small screens (truncated); the overlay menu is for in-page links.
 - **Mobile (≤940px):** Hamburger (44×44, two 20×2 sheen bars). Open state fills the viewport with solid ink, no blur; links become Marcellus at `clamp(1.5rem, 5vw, 1.9rem)`, centered. Escape and link-click close it.
